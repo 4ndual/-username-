@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link href="./dist/output.css" rel="stylesheet">
+
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+  <nav class=" px-2 sm:px-4 py-2.5  dark:bg-neutral-900">
+    <div x-data="{ open: false }" class="container flex flex-wrap justify-between items-center mx-auto">
+      <a href="/" class="flex items-start">
+        <img src="images/logo.svg" class=" mr-3 h-14 sm:h-9" alt="Logo" />
+      </a>
+      <button x-on:click="open = ! open" data-collapse-toggle="mobile-menu" type="button"
+        class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="mobile-menu" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path :class="{ 'hidden': open }" fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"></path>
+          <path :class="{ 'hidden': ! open }" fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"></path>
+        </svg>
+
+
+      </button>
+
+      <div :class="{ 'hidden': ! open }" class=" w-full md:block md:w-auto" id="mobile-menu">
+        <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+          <li>
+            <a href="#" class="menu-text" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#Projects" class="menu-text">
+              Projects</a>
+          </li>
+          <li>
+            <a href="#Contact" class="menu-text">
+              Contact</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="h-full">
+
+    <div class="w-full h-2 p6 bg-white">
+
+    </div>
+
+    <div class="relative h-96 w-full  bg-neutral-900 bg-local">
+
+      <div class="absolute ml-14 mt-16 ">
+        <img class=" h-96 w-64  p-0" src="images/white-console.svg" alt="white-console" />
+      </div>
+      <div class=" ml-80 p-12  pt-28">
+        <h2 class=" text-4xl font-Roboto text-white break-words mb-4">About me</h2>
+        <h1 class=" ml-2 text-xl font-Roboto text-white mb-3">
+          Hi, I’m W. Andrés
+        </h1>
+        <p class=" font-Roboto text-white break-words">
+
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices lectus sit amet leo vulputate, at
+          convallis nibh euismod.
+
+          Proin et pretium urna, a rutrum massa. In odio risus, faucibus vitae interdum sed, cursus eget tortor.</p>
+      </div>
+    </div>
+
+    <div class=" h-96 w-full  bg-white bg-local">
+    </div>
+
+    <div class=" h-96 w-full  bg-neutral-900 bg-local">
+      <div class="absolute w-full p-10 flex flex-wrap justify-around  mt-16 ">
+        <div class="relative">
+          <img class=" h-96 w-64  p-0" src="images/black-console.svg" alt="black-console">
+          <p class="absolute text-center -mt-80  text-white">
+            I'm proficient with
+            aaaaaaaaaaaaaaaaaaa
+            aaaaaaaaaaaaaaaaaaa
+            aaaaaaaaaaaaaaaaaaa
+          </p>
+
+        </div>
+        <div class="relative">
+          <img class=" h-96 w-64  p-0 mt-16" src="images/black-console.svg" alt="black-console" />
+          <p class="absolute text-center -mt-80  text-white">
+            I have used a few times
+            aaaaaaaaaaaaaaaaaaa
+            aaaaaaaaaaaaaaaaaaa
+            aaaaaaaaaaaaaaaaaaa
+          </p>
+        </div>
+        <div class="relative">
+          <img class=" h-96 w-64  p-0" src="images/black-console.svg" alt="black-console" />
+          <p class="absolute text-center -mt-80  text-white">
+            I'm learning
+            aaaaaaaaaaaaaaaaaaa
+            aaaaaaaaaaaaaaaaaaa
+            aaaaaaaaaaaaaaaaaaa
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+    <div class="h-96 w-full  bg-white bg-local">
+    </div>
+    <div class=" h-14 w-full  bg-white bg-local">
+    </div>
+    <div class=" h-screen w-full flex flex-wrap   p-12 bg-neutral-900 bg-local">
+      <img class="p-0 h-1/2 w-1/2" src="images/mac.svg" alt="black-console" />
+      <img class="p-0 h-1/2 w-1/2" src="images/mac.svg" alt="black-console" />
+      <img class="p-0 h-1/2 w-1/2" src="images/mac.svg" alt="black-console" />
+      <img class="p-0 h-1/2 w-1/2" src="images/mac.svg" alt="black-console" />
+    </div>
+    <div class=" h-screen w-full p-28 bg-white bg-local">
+      <div class=" mt-16 flex  flex-col gap-8">
+        <h2 class=" text-4xl font-Roboto text-black break-words mb-4">Contact me!</h2>
+        <input type="text" class=" h-11 rounded-lg border border-indigo-200 focus: outline-indigo-400" name="" placeholder="Name" id="">
+        <input type="text" class=" h-11 rounded-lg border border-indigo-200 outline-indigo-400" name="" placeholder="Email" id="">
+
+        <input type="text" class=" h-11 rounded-lg border border-indigo-200 outline-indigo-400" name="" placeholder="Type of project" id="">
+
+        <textarea type="text" class=" h-36 rounded-lg border border-indigo-200 outline-indigo-400" name="" placeholder="Details" id=""></textarea>
+      </div>
+    </div>
+
+  </main>
+
+
+
+
+  <footer class=" px-2 py-2 fixed bottom-0 right-0 mix-blend-difference">
+    <div class="flex flex-nowrap flex-col justify-end gap-3  ">
+
+      <a>
+        <img class="invert space-x-5" src="images/github.svg" alt="white-console" />
+      </a>
+
+      <img class=" invert  " src="images/linkedin.svg" alt="white-console" />
+      <img class=" self-end invert " src="images/telegram.svg" alt="white-console" />
+    </div>
+  </footer>
+
+</body>
+
+</html>
